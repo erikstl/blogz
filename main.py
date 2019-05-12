@@ -63,7 +63,7 @@ class BlogHandler(webapp2.RequestHandler):
 class IndexHandler(BlogHandler):
 
     def get(self):
-        """ List all blog users """
+        """ List all users """
         users = User.all()
         t = jinja_env.get_template("index.html")
         response = t.render(users = users)
